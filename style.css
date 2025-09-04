@@ -7,8 +7,8 @@
 }
 
 body {
-  background: #0f0f0f;
-  color: #eee;
+  background: linear-gradient(120deg, #2c3e50, #4ca1af);
+  color: #fff;
   line-height: 1.6;
 }
 
@@ -17,147 +17,126 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.6);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.logo {
-  color: #fff;
+.navbar .logo {
   font-size: 24px;
   font-weight: bold;
 }
 
-.nav-links {
+.navbar ul {
   list-style: none;
   display: flex;
-  gap: 20px;
 }
 
-.nav-links a {
-  text-decoration: none;
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
   color: #fff;
-  font-weight: 500;
+  text-decoration: none;
   transition: 0.3s;
 }
 
-.nav-links a:hover {
+.navbar ul li a:hover {
   color: #ffd700;
-  text-shadow: 0px 0px 8px #ffd700;
 }
 
-/* About Section */
-.about-section {
-  background: linear-gradient(135deg, #141e30, #243b55);
+/* Sections */
+section {
   padding: 60px 20px;
+  text-align: center;
+}
+
+/* Card Style with 3D Effect */
+.card {
+  background: #fff;
+  color: #333;
+  padding: 30px;
   border-radius: 15px;
-  margin: 40px auto;
-  max-width: 900px;
-  box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
-  transform: perspective(1000px) rotateX(2deg);
-  transition: transform 0.5s ease;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-section:hover {
-  transform: perspective(1000px) rotateX(0deg) scale(1.02);
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.6);
 }
 
-.about-section h2 {
-  text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #ffd700;
-}
-
-.about-section p {
-  font-size: 1.2em;
-  text-align: center;
-}
-
-/* Skills Section */
-.skills-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.skills-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.skill-card {
-  background: #1e1e2f;
-  padding: 20px 30px;
-  border-radius: 12px;
-  font-size: 1.1em;
-  color: #ffd700;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.skill-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 12px 25px rgba(255, 215, 0, 0.5);
-}
-
-/* Projects Section */
-.projects-section {
-  padding: 60px 20px;
-  text-align: center;
+/* Projects */
+.projects-section h2 {
+  margin-bottom: 30px;
+  font-size: 2em;
 }
 
 .projects-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 20px;
 }
 
 .project-card {
-  background: #222;
-  padding: 25px;
-  border-radius: 15px;
+  background: #fff;
+  color: #333;
+  padding: 20px;
   width: 280px;
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
-  transition: transform 0.4s, box-shadow 0.4s;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-12px) rotateY(5deg);
-  box-shadow: 0px 15px 30px rgba(255, 215, 0, 0.4);
+  transform: rotateY(8deg) translateY(-8px);
 }
 
-.project-card h3 {
-  margin-bottom: 15px;
-  color: #ffd700;
+/* Contact */
+.contact-section h2 {
+  margin-bottom: 20px;
 }
 
-/* Contact Section */
-.contact-section {
-  padding: 50px 20px;
-  text-align: center;
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.contact-section a {
-  color: #ffd700;
-  text-decoration: none;
+form input, form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+form button {
+  background: #ffd700;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
   transition: 0.3s;
 }
 
-.contact-section a:hover {
-  text-shadow: 0 0 10px #ffd700;
+form button:hover {
+  background: #ffaa00;
+  transform: scale(1.05);
 }
 
 /* Footer */
 footer {
+  background: rgba(0,0,0,0.7);
   text-align: center;
-  padding: 20px;
-  background: #111;
-  color: #aaa;
-  margin-top: 40px;
+  padding: 15px;
+  margin-top: 30px;
 }
